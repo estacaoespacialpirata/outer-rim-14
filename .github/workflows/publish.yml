@@ -42,19 +42,18 @@ jobs:
     - name: Upload files to centcomm
       uses: appleboy/scp-action@master
       with:
-        host: hellomouse.net
-        username: or14-builds
-        key: ${{ secrets.OUTER_RIM_BUILDS_PUSH_KEY }}
+        host: 152.67.46.236
+        username: ubuntu
+        key : ${{ secrets.CENTCOMM_KEY }}
         source: "release/${{ github.sha }}"
-        target: "/home/or14-builds/public_html/builds/"
+        target: "/var/www/html/builds/"
         strip_components: 1
 
-    # For some fucking reason this doesn't work with hellomouse.net. FUCK. Poke moony to update shit.
     - name: Update manifest JSON
       uses: appleboy/ssh-action@master
       continue-on-error: true
       with:
-        host: hellomouse.net
-        username: or14-builds
-        key: ${{ secrets.OUTER_RIM_BUILDS_PUSH_KEY }}
-        script: /home/or14-builds/push.ps1 ${{ github.sha }}
+        host: 152.67.46.236
+        username: ubuntu
+        key : ${{ secrets.CENTCOMM_KEY }}
+        script: node ~/wizards-build-push/builds_dir/push.js ${{ github.sha }}
