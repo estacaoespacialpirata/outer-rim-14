@@ -56,4 +56,4 @@ jobs:
         host: 152.67.46.236
         username: ubuntu
         key : ${{ secrets.CENTCOMM_KEY }}
-        script: node ~/wizards-build-push/builds_dir/push.js ${{ github.sha }}
+        script: node ~/wizards-build-push/builds_dir/push1.js ${{ github.sha }}
