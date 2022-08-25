@@ -787,7 +787,7 @@ namespace Content.Shared.CCVar
         /// Whether or not OOC chat should be enabled during a round.
         /// </summary>
         public static readonly CVarDef<bool> OocEnableDuringRound =
-            CVarDef.Create("ooc.enable_during_round", false, CVar.NOTIFY | CVar.REPLICATED |CVar.SERVER);
+            CVarDef.Create("ooc.enable_during_round", true, CVar.NOTIFY | CVar.REPLICATED | CVar.SERVER);
 
         /*
          * LOOC
@@ -1131,7 +1131,7 @@ namespace Content.Shared.CCVar
             CVarDef.Create("worldgen.max_debris_load_time_ms", 4f, CVar.SERVERONLY);
 
         public static readonly CVarDef<float> PointOfInterestChance =
-            CVarDef.Create("worldgen.point_of_interest_chance", (4f/100f), CVar.SERVERONLY);
+            CVarDef.Create("worldgen.point_of_interest_chance", (4f / 100f), CVar.SERVERONLY);
 
         /*
          * Controls
