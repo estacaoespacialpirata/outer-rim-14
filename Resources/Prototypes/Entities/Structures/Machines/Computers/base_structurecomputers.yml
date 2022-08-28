@@ -15,8 +15,11 @@
     graph: Computer
     node: computer
   - type: Computer
+  - type: Temperature
+  - type: ApcPassiveHeater
+  - type: AtmosExposed
   - type: ApcPowerReceiver
-    powerLoad: 200
+    powerLoad: 20
   - type: ExtensionCableReceiver
   - type: Sprite
     sprite: Structures/Machines/computers.rsi

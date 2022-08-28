@@ -41,8 +41,11 @@
   parent: BaseThruster
   components:
   - type: Thruster
+  - type: Temperature
+  - type: ApcPassiveHeater
+  - type: AtmosExposed
   - type: ApcPowerReceiver
-    powerLoad: 1500
+    powerLoad: 150
   - type: ExtensionCableReceiver
   - type: Sprite
     sprite: Structures/Shuttles/thruster.rsi
@@ -100,6 +103,9 @@
   components:
   - type: Thruster
     requireSpace: false
+  - type: Temperature
+  - type: ApcPassiveHeater
+  - type: AtmosExposed
   - type: ApcPowerReceiver
     needsPower: false
     powerLoad: 0
@@ -121,8 +127,11 @@
   id: Gyroscope
   parent: BaseThruster
   components:
+  - type: Temperature
+  - type: ApcPassiveHeater
+  - type: AtmosExposed
   - type: ApcPowerReceiver
-    powerLoad: 1500
+    powerLoad: 150
   - type: ExtensionCableReceiver
   - type: Thruster
     thrusterType: Angular
@@ -158,6 +167,9 @@
   components:
     - type: Thruster
       requireSpace: false
+    - type: Temperature
+    - type: ApcPassiveHeater
+    - type: AtmosExposed
     - type: ApcPowerReceiver
       needsPower: false
       powerLoad: 0

@@ -111,25 +111,26 @@ namespace Content.Shared.Atmos
         /// </summary>
         public const float MinimumAirToSuspend = (MolesCellStandard * MinimumAirRatioToSuspend);
 
-        public const float MinimumTemperatureToMove = (T20C + 100f);
+        public const float MinimumTemperatureToMove = 0.1f;
 
         public const float MinimumMolesDeltaToMove = (MolesCellStandard * MinimumAirRatioToMove);
 
         /// <summary>
         ///     Minimum temperature difference before group processing is suspended
         /// </summary>
-        public const float MinimumTemperatureDeltaToSuspend = 4.0f;
+        public const float MinimumTemperatureDeltaToSuspend = 0.1f;
 
         /// <summary>
         ///     Minimum temperature difference before the gas temperatures are just set to be equal.
         /// </summary>
-        public const float MinimumTemperatureDeltaToConsider = 0.5f;
+        public const float MinimumTemperatureDeltaToConsider = 0.01f;
 
         /// <summary>
         ///     Minimum temperature for starting superconduction.
         /// </summary>
-        public const float MinimumTemperatureStartSuperConduction = (T20C + 400f);
-        public const float MinimumTemperatureForSuperconduction = (T20C + 80f);
+        public const float MinimumTemperatureStartSuperConduction = 20.0f;
+
+        public const float MinimumTemperatureForSuperconduction = 20.0f;
 
         /// <summary>
         ///     Minimum heat capacity.
